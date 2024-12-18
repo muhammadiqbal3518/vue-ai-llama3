@@ -188,13 +188,6 @@ export default {
       <div v-if="chatHistory == ''" class="mb-4">
         <div class="flex justify-start">
           <div class="bg-blue-500 text-white px-4 py-2 rounded-lg max-w-xs text-right">
-            Chat Completion Ai & Audio Transcribe
-          </div>
-        </div>
-      </div>
-      <div v-if="chatHistory == ''" class="mb-4">
-        <div class="flex justify-start">
-          <div class="bg-blue-500 text-white px-4 py-2 rounded-lg max-w-xs text-right">
             Apakah ada yang bisa saya bantu?
           </div>
         </div>
@@ -236,6 +229,14 @@ export default {
       <!-- Rekam Suara -->
 
       <!-- Input Teks -->
+      <div
+        @click="cleanChat"
+        v-if="chatHistory != ''"
+        style="cursor: pointer"
+        class="bg-red-500 hover:bg-red-600 py-2 px-2 text-white font-bold rounded-md"
+      >
+        Del
+      </div>
       <input
         v-model="content"
         type="text"
@@ -253,14 +254,6 @@ export default {
         <div v-if="processing" role="status">...</div>
         <div v-else>Send</div>
       </button>
-      <div
-        @click="cleanChat"
-        v-if="chatHistory != ''"
-        style="cursor: pointer"
-        class="bg-red-500 hover:bg-red-600 py-2 px-2 text-white font-bold rounded-md"
-      >
-        Del
-      </div>
     </form>
   </main>
 </template>
