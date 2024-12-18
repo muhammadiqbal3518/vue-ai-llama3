@@ -239,7 +239,7 @@ export default {
       <input
         v-model="content"
         type="text"
-        placeholder="Masukkan teks atau rekam suara"
+        placeholder="Masukkan perintah"
         class="flex-1 py-2 px-4 rounded-md border border-gray-300"
         :disabled="audioBlob || audioFile"
       />
@@ -248,7 +248,7 @@ export default {
       <button
         type="submit"
         :disabled="processing"
-        class="bg-green-500 hover:bg-green-600 py-2 px-4 text-white font-bold rounded-md"
+        class="bg-green-500 hover:bg-green-600 py-2 px-2 text-white font-bold rounded-md"
       >
         <div v-if="processing" role="status">...</div>
         <div v-else>Send</div>
@@ -257,7 +257,7 @@ export default {
         @click="cleanChat"
         v-if="chatHistory != ''"
         style="cursor: pointer"
-        class="bg-red-500 hover:bg-red-600 py-2 px-4 text-white font-bold rounded-md"
+        class="bg-red-500 hover:bg-red-600 py-2 px-2 text-white font-bold rounded-md"
       >
         Del
       </div>
