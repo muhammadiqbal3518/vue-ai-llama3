@@ -222,7 +222,7 @@ export default {
     <!-- Input Area -->
     <form
       @submit.prevent="sendRequest"
-      class="fixed bottom-0 left-0 w-full shadow-md p-4 flex items-center gap-2"
+      class="fixed bottom-0 left-0 w-full shadow-md p-2 flex items-center gap-1"
     >
       <!-- Upload Audio File -->
 
