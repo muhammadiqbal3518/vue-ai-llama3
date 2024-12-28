@@ -13,7 +13,7 @@ export const requestToIqbalAI = async (content) => {
     messages: [
       {
         role: 'user',
-        content,
+        content: 'Balas dalam bahasa indonesia: ' + content,
       },
     ],
     model: 'llama3-8b-8192',
