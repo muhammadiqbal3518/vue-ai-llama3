@@ -17,14 +17,14 @@ export default {
       chatHistory: JSON.parse(localStorage.getItem("chatHistory")) || [],
     };
   },
-  // mounted() {
-  //   document.addEventListener("contextmenu", this.disableContextMenu);
-  //   document.addEventListener("keydown", this.disableDevToolsKeys);
-  // },
-  // beforeUnmount() {
-  //   document.removeEventListener("contextmenu", this.disableContextMenu);
-  //   document.removeEventListener("keydown", this.disableDevToolsKeys);
-  // },
+  mounted() {
+    document.addEventListener("contextmenu", this.disableContextMenu);
+    document.addEventListener("keydown", this.disableDevToolsKeys);
+  },
+  beforeUnmount() {
+    document.removeEventListener("contextmenu", this.disableContextMenu);
+    document.removeEventListener("keydown", this.disableDevToolsKeys);
+  },
   methods: {
     handleFileUpload(event) {
       this.audioFile = event.target.files[0];
@@ -136,18 +136,18 @@ export default {
         }
       });
     },
-    // disableContextMenu(event) {
-    //   event.preventDefault();
-    // },
-    // disableDevToolsKeys(event) {
-    //   if (
-    //     (event.ctrlKey && event.shiftKey && event.key === "I") || // Ctrl+Shift+I
-    //     (event.ctrlKey && event.key === "U") || // Ctrl+U
-    //     event.key === "F12" // F12
-    //   ) {
-    //     event.preventDefault();
-    //   }
-    // },
+    disableContextMenu(event) {
+      event.preventDefault();
+    },
+    disableDevToolsKeys(event) {
+      if (
+        (event.ctrlKey && event.shiftKey && event.key === "I") || // Ctrl+Shift+I
+        (event.ctrlKey && event.key === "U") || // Ctrl+U
+        event.key === "F12" // F12
+      ) {
+        event.preventDefault();
+      }
+    },
   },
 };
 </script>
@@ -156,7 +156,9 @@ export default {
   <main
     class="flex flex-col min-h-[80vh] justify-between items-center max-w-xl w-full mx-auto"
   >
-    <h1 class="text-4xl text-indigo-500 mt-6">Jarvis A-Irengman</h1>
+    <h1 class="text-4xl text-indigo-500 mt-6">
+      IQBAL Ai
+    </h1>
     <h5 class="text-xs text-white mb-6">model Llama 3 8b</h5>
 
     <!-- Chat Area -->
