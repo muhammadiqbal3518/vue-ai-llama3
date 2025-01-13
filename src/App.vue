@@ -17,14 +17,14 @@ export default {
       chatHistory: JSON.parse(localStorage.getItem("chatHistory")) || [],
     };
   },
-  mounted() {
-    document.addEventListener("contextmenu", this.disableContextMenu);
-    document.addEventListener("keydown", this.disableDevToolsKeys);
-  },
-  beforeUnmount() {
-    document.removeEventListener("contextmenu", this.disableContextMenu);
-    document.removeEventListener("keydown", this.disableDevToolsKeys);
-  },
+  // mounted() {
+  //   document.addEventListener("contextmenu", this.disableContextMenu);
+  //   document.addEventListener("keydown", this.disableDevToolsKeys);
+  // },
+  // beforeUnmount() {
+  //   document.removeEventListener("contextmenu", this.disableContextMenu);
+  //   document.removeEventListener("keydown", this.disableDevToolsKeys);
+  // },
   methods: {
     handleFileUpload(event) {
       this.audioFile = event.target.files[0];
@@ -136,18 +136,18 @@ export default {
         }
       });
     },
-    disableContextMenu(event) {
-      event.preventDefault();
-    },
-    disableDevToolsKeys(event) {
-      if (
-        (event.ctrlKey && event.shiftKey && event.key === "I") || // Ctrl+Shift+I
-        (event.ctrlKey && event.key === "U") || // Ctrl+U
-        event.key === "F12" // F12
-      ) {
-        event.preventDefault();
-      }
-    },
+    // disableContextMenu(event) {
+    //   event.preventDefault();
+    // },
+    // disableDevToolsKeys(event) {
+    //   if (
+    //     (event.ctrlKey && event.shiftKey && event.key === "I") || // Ctrl+Shift+I
+    //     (event.ctrlKey && event.key === "U") || // Ctrl+U
+    //     event.key === "F12" // F12
+    //   ) {
+    //     event.preventDefault();
+    //   }
+    // },
   },
 };
 </script>
