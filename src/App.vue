@@ -157,7 +157,7 @@ export default {
     class="flex flex-col min-h-[80vh] justify-between items-center max-w-xl w-full mx-auto"
   >
     <h1 class="text-4xl text-indigo-500 mt-6">
-      IQBAL Ai
+      Irengman Ai
     </h1>
     <h5 class="text-xs text-white mb-6">model Llama 3 8b</h5>
 
