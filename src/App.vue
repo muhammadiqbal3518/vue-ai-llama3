@@ -251,7 +251,7 @@ export default {
       <button
         type="submit"
         :disabled="processing"
-        class="bg-green-500 hover:bg-green-600 py-2 px-2 text-white font-bold rounded-md"
+        class="bg-blue-500 hover:bg-blue-600 py-2 px-2 text-white font-bold rounded-md"
       >
         <div v-if="processing" role="status">...</div>
         <div v-else>Send</div>
