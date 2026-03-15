@@ -70,7 +70,7 @@ export default {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Input teks atau audio tidak boleh kosong!",
+          text: "Tolong masukkan command terlebih dahulu",
         });
       }
 
